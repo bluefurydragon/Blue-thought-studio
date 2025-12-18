@@ -1,0 +1,157 @@
+/* =========================
+   Blue Thought Studios
+   Global Styles (style.css)
+   Clean • Minimal • Intentional
+   ========================= */
+
+:root {
+  /* Colors */
+  --color-bg: #0e1624;          /* Deep midnight blue */
+  --color-surface: #141f33;     /* Card / section background */
+  --color-text: #e6ebf2;        /* Primary text */
+  --color-muted: #a8b2c3;       /* Secondary text */
+  --color-accent: #4cc2ff;      /* Soft cyan accent */
+
+  /* Layout */
+  --max-width: 1100px;
+  --radius: 14px;
+}
+
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  background-color: var(--color-bg);
+  color: var(--color-text);
+  line-height: 1.6;
+}
+
+/* Utilities */
+.container {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 2rem 1.5rem;
+}
+
+/* Header */
+.site-header {
+  background: rgba(14, 22, 36, 0.8);
+  backdrop-filter: blur(8px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.site-header .container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logo {
+  font-size: 1.25rem;
+  font-weight: 600;
+}
+
+.nav a {
+  margin-left: 1.5rem;
+  text-decoration: none;
+  color: var(--color-muted);
+  font-weight: 500;
+  transition: color 0.2s ease;
+}
+
+.nav a:hover {
+  color: var(--color-text);
+}
+
+/* Hero */
+.hero {
+  padding: 5rem 0 4rem;
+}
+
+.hero h2 {
+  font-size: 2.2rem;
+  font-weight: 700;
+  max-width: 700px;
+}
+
+.hero p {
+  margin-top: 1rem;
+  max-width: 600px;
+  color: var(--color-muted);
+}
+
+/* Buttons */
+.btn-primary {
+  display: inline-block;
+  margin-top: 2rem;
+  padding: 0.75rem 1.6rem;
+  border-radius: var(--radius);
+  background: var(--color-accent);
+  color: #0e1624;
+  text-decoration: none;
+  font-weight: 600;
+  transition: transform 0.15s ease, opacity 0.15s ease;
+}
+
+.btn-primary:hover {
+  transform: translateY(-2px);
+  opacity: 0.9;
+}
+
+/* Overview / Cards */
+.overview {
+  padding: 3rem 0 4rem;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1.5rem;
+}
+
+.card {
+  background: var(--color-surface);
+  padding: 1.8rem;
+  border-radius: var(--radius);
+}
+
+.card h3 {
+  font-size: 1.1rem;
+  margin-bottom: 0.5rem;
+}
+
+.card p {
+  color: var(--color-muted);
+  font-size: 0.95rem;
+}
+
+/* Footer */
+.site-footer {
+  border-top: 1px solid rgba(255, 255, 255, 0.05);
+  margin-top: 4rem;
+}
+
+.site-footer p {
+  color: var(--color-muted);
+  font-size: 0.85rem;
+}
+
+/* Responsive tweaks */
+@media (max-width: 600px) {
+  .hero h2 {
+    font-size: 1.7rem;
+  }
+
+  .nav a {
+    margin-left: 1rem;
+  }
+}
